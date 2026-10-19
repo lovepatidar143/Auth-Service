@@ -299,13 +299,13 @@ Add roles in `src/utils/constants.js`.
 - Several instances → Redis store for rate limiting.
 - Frontend on a different _site_: `COOKIE_SAMESITE=none` (HTTPS required) and add the origin to `CORS_ORIGIN`.
 
-## Design trade-offs (good interview material)
 
-- **Session lookup per request** costs one DB read but gives real logout/revocation. Pure stateless JWTs can't do that.
-- **Grace window** on rotation trades a tiny detection delay (≤10s) for not logging users out on concurrent refreshes.
-- **Account lockout** can be abused to lock someone out (DoS); mitigated by being temporary + password reset unlocks.
-- Email verification link is a GET: some mail scanners prefetch links and could consume the token. A POST confirmation page on the frontend avoids that.
 
-## Roadmap ideas
 
-2FA/TOTP, OAuth (Google/GitHub), avatar upload (multer + Cloudinary), Redis for rate limits/session cache, audit log, Docker + CI, OpenAPI/Swagger docs.
+### 👨‍💻 Developer
+
+**Love Patidar**  
+
+MANIT Bhopal
+
+*Designed and developed with ❤️ by Love Patidar.*
