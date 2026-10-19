@@ -1,0 +1,138 @@
+/* ---- User pages ---- */
+.user-hero {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: white;
+  border: var(--border-thick);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
+.user-avatar-big {
+  width: 72px;
+  height: 72px;
+  border: var(--border-thick);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--accent3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-hand);
+  font-size: 2.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  box-shadow: var(--shadow);
+}
+.user-avatar-big img { width: 100%; height: 100%; object-fit: cover; }
+.user-greeting {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+/* ---- Stat grid ---- */
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+.stat-card {
+  text-align: center;
+  padding: 20px 16px;
+}
+.stat-icon  { font-size: 1.8rem; margin-bottom: 6px; }
+.stat-label { font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; color: var(--ink-light); margin-bottom: 6px; }
+.stat-value { font-family: var(--font-hand); font-size: 1.3rem; font-weight: 700; }
+.stat-bad   { color: var(--red); }
+
+/* ---- Action grid ---- */
+.section-title {
+  font-family: var(--font-hand);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px dashed rgba(0,0,0,0.15);
+}
+.action-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+.action-card {
+  text-decoration: none;
+  color: var(--ink);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  transition: transform 0.1s, box-shadow 0.1s;
+  cursor: pointer;
+}
+.action-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+.action-icon  { font-size: 1.8rem; }
+.action-label { font-family: var(--font-hand); font-size: 1.2rem; font-weight: 700; }
+.action-desc  { font-size: 0.8rem; font-weight: 600; color: var(--ink-light); }
+
+/* ---- Profile tabs ---- */
+.tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 24px;
+  border-bottom: var(--border);
+  padding-bottom: 0;
+}
+.tab-btn {
+  background: none;
+  border: var(--border);
+  border-bottom: none;
+  padding: 8px 18px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  border-radius: 4px 4px 0 0;
+  transform: translateY(3px);
+  transition: all 0.1s;
+  box-shadow: 3px 0 0 var(--ink);
+}
+.tab-btn.active {
+  background: white;
+  transform: translateY(0);
+  box-shadow: none;
+  z-index: 1;
+  position: relative;
+}
+.tab-btn:hover:not(.active) {
+  background: var(--paper-dark);
+}
+
+/* ---- Sessions ---- */
+.session-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px;
+  background: white;
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 12px;
+  transition: transform 0.1s;
+}
+.session-card:hover { transform: translate(-2px, -2px); box-shadow: var(--shadow-lg); }
+.session-card.current { border-color: var(--accent); background: #fff9f7; }
+.session-device { font-size: 1.8rem; }
+.session-info   { flex: 1; min-width: 0; }
+.session-meta   { font-size: 0.78rem; color: var(--ink-light); font-weight: 600; margin-top: 4px; }
+
+@media (max-width: 600px) {
+  .user-hero { flex-direction: column; text-align: center; }
+  .stat-grid, .action-grid { grid-template-columns: 1fr 1fr; }
+}

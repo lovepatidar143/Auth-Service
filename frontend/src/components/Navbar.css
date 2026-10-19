@@ -1,0 +1,116 @@
+/* ---- Navbar ---- */
+.navbar {
+  background: var(--paper);
+  border-bottom: var(--border-thick);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 0 var(--ink);
+}
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.brand-icon { font-size: 1.4rem; }
+.brand-name {
+  font-family: var(--font-hand);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.navbar-links {
+  display: flex;
+  list-style: none;
+  gap: 4px;
+  flex: 1;
+}
+.nav-link {
+  display: block;
+  padding: 6px 14px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  color: var(--ink-light);
+  border: 2px solid transparent;
+  border-radius: 3px;
+  transition: all 0.1s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--ink);
+  background: var(--paper-dark);
+  border-color: var(--ink);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+.nav-user-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 12px;
+  background: var(--paper-dark);
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+}
+.nav-username {
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* ---- Hamburger (mobile) ---- */
+.hamburger {
+  display: none;
+  background: none;
+  border: var(--border);
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 var(--ink);
+  font-weight: 700;
+}
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 20px 16px;
+  border-top: 2px dashed rgba(0,0,0,0.2);
+  background: var(--paper-dark);
+}
+.mobile-link {
+  display: block;
+  padding: 10px 14px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  color: var(--ink);
+  border: 2px solid var(--ink);
+  border-radius: 3px;
+  box-shadow: 3px 3px 0 var(--ink);
+  background: white;
+}
+
+@media (max-width: 720px) {
+  .navbar-links { display: none; }
+  .hamburger    { display: block; }
+  .mobile-menu  { display: flex; }
+  .nav-user-pill .nav-username { display: none; }
+}

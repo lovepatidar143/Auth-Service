@@ -1,0 +1,57 @@
+/* ---- Auth pages shared styles ---- */
+.auth-page {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  position: relative;
+  overflow: visible;
+}
+
+/* Paper corner fold */
+.corner-fold {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 36px 36px 0;
+  border-color: transparent var(--paper-dark) transparent transparent;
+  filter: drop-shadow(-2px 2px 0 var(--ink));
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 28px;
+}
+.auth-icon {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+.auth-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 4px;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--ink-light);
+}
+
+.auth-link {
+  color: var(--accent);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.auth-link:hover { color: var(--ink); }
